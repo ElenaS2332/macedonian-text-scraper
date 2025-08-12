@@ -60,7 +60,7 @@ synthetic_data = synthetic_data * 3
 
 aug_df = pd.DataFrame(synthetic_data, columns=["input_sentence", "target_sentence"])
 aug_df = aug_df.drop_duplicates()
-aug_df["input_text"] = "исправи реченица: " + aug_df["input_sentence"]
+aug_df["input_text"] = "поправи ја реченицата: " + aug_df["input_sentence"]
 aug_df["target_text"] = aug_df["target_sentence"]
 
 dataset = Dataset.from_pandas(aug_df[["input_text", "target_text"]])
