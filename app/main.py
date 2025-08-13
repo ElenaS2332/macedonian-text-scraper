@@ -9,7 +9,6 @@ WIKI_URL = "https://mk.wikipedia.org/wiki/%D0%98%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D
 OUTPUT_CSV = "wikipedia.csv"
 
 def clean_text(text: str) -> str:
-    # Remove references like [1], [12][13]
     return re.sub(r'\[\d+(?:\]\[\d+)*\]', '', text).strip()
 
 def is_valid_sentence(sentence: str) -> bool:

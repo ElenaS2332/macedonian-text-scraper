@@ -72,7 +72,6 @@ def modify_sentences_from_csv(input_path, output_path, max_workers=5):
         'modified_sentence': [r[2] for r in results]
     })
 
-    # Save results (append to file if exists, no header)
     result_df.to_csv(
         output_path,
         mode='a',
